@@ -1,5 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'dart:math';
+
+import 'package:flutter/widgets.dart';
 
 void main() {
   runApp(const MyApp());
@@ -55,23 +58,43 @@ class _MyHomePageState extends State<MyHomePage> {
 
       body: Center(
         child: Column(
+            //mainAxisAlignment: MainAxisAlignment.center,
+          //crossAxisAlignment: CrossAxisAlignment.start,
 
-          mainAxisAlignment: MainAxisAlignment.spaceBetween ,
-          crossAxisAlignment: CrossAxisAlignment.stretch ,
-          children: <Widget>[
-            Text(
-              'Пользователь: Грошев В.А.',
-                style: Theme.of(context).textTheme.headlineMedium,
-            ),
-            Text(
-              'Статус: Я хотел сделать отдельным боком фио ввеху посередине, а текст с кол-вом подписчиков слева, но не разобрался как это работает',
+          children: [
+            Row(
+                mainAxisAlignment: MainAxisAlignment.start ,
 
+              children: [
+                Text(
+                'Пользователь: Грошев В.А.',
+                 style: Theme.of(context).textTheme.headlineMedium,
+                )
+              ]
             ),
             Text(
-              'Количество подписчиков:'
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
+              'Статус:Привет! Пока ты смотрел страницу, уже столько людей подписалось, попробуй обновить её! ',
             ),
+            Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
+
+                children: [
+                  Text(
+                    'Количество подписчиков:'
+                        '$_counter',
+                    style: Theme.of(context).textTheme.headline5,
+                  )
+                ]
+            ),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                const Icon(Icons.accessibility,
+                    color : Colors.yellowAccent,
+                size: 300,)
+              ]
+            )
           ],
         ),
       ),
