@@ -72,12 +72,18 @@ class _MyHomePageState extends State<MyHomePage> {
                 )
               ]
             ),
-            Text(
-              'Статус:Привет! Пока ты смотрел страницу, уже столько людей подписалось, попробуй обновить её! ',
+            Row(
+                mainAxisAlignment: MainAxisAlignment.start ,
+
+                children: [
+                  Text(
+                    'Статус:Привет! Пока ты смотрел страницу, уже столько людей подписалось, попробуй обновить её! ',
+                  ),
+                ]
             ),
             Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.start,
 
                 children: [
                   Text(
@@ -91,7 +97,7 @@ class _MyHomePageState extends State<MyHomePage> {
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 const Icon(Icons.accessibility,
-                    color : Colors.yellowAccent,
+                    color : Colors.yellow,
                 size: 300,)
               ]
             )
