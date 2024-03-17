@@ -85,20 +85,23 @@ class _MyHomePageState extends State<MyHomePage> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.start,
 
-                children: [
+                children: <Widget>[
                   Text(
                     'Количество подписчиков:'
                         '$_counter',
                     style: Theme.of(context).textTheme.headline5,
-                  )
-                ]
+                  ),
+                 // Image.asset('assets/image/mem.jpg'),
+                  //const Image(image: AssetImage('assets/image/mem.jpg'),
+                 // )
+                ],
             ),
             Column(
               mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                const Icon(Icons.accessibility,
-                    color : Colors.yellow,
-                size: 300,)
+              children: <Widget>[
+                Image.asset(('assets/image/mem.jpg'),
+                ),
+                //image: AssetImage('assets/image/mem.jpeg'),)
               ]
             )
           ],
